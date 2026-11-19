@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>MVCExample1</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>26</maven.compiler.source>
+        <maven.compiler.target>26</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+
+        <mapdb.version>3.1.0</mapdb.version>
+        <objectbox.version>5.4.2</objectbox.version>
+    </properties>
+
+    <dependencies>
+        <!-- MAPDB -->
+        <dependency>
+            <groupId>org.mapdb</groupId>
+            <artifactId>mapdb</artifactId>
+            <version>${mapdb.version}</version>
+        </dependency>
+
+        <!-- OBJECTBOX: Java API -->
+        <dependency>
+            <groupId>io.objectbox</groupId>
+            <artifactId>objectbox-java</artifactId>
+            <version>${objectbox.version}</version>
+        </dependency>
+
+        <!-- OBJECTBOX: Native library for Windows 64 bits -->
+        <dependency>
+            <groupId>io.objectbox</groupId>
+            <artifactId>objectbox-windows</artifactId>
+            <version>${objectbox.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <!-- Java compiler and ObjectBox annotation processor -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.14.1</version>
+                <configuration>
+                    <release>17</release>
+
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>io.objectbox</groupId>
+                            <artifactId>objectbox-processor</artifactId>
+                            <version>${objectbox.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+
+                    <compilerArgs>
+                        <arg>-Aobjectbox.modelPath=${project.basedir}/objectbox-models/default.json</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
+            <!-- ObjectBox bytecode transformation -->
+            <plugin>
+                <groupId>io.objectbox</groupId>
+                <artifactId>objectbox-maven-plugin</artifactId>
+                <version>1.3.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>transform</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
