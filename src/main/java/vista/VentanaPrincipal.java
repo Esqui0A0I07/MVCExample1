@@ -43,10 +43,10 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		labelSeleccion.setText("Escoja que operacion desea realizar");
 		labelSeleccion.setBounds(75, 240, 250, 25);
 
-		textoIntroduccion = "Esta aplicación presenta un ejemplo práctico simple del patrón "
-				+ "de diseño arquitectural MVC.\n\n"
-				+ "La aplicación permite registrar, actualizar, buscar y eliminar registros de una tabla Persona." +
-				"también son vinculados algunos conceptos de los Patrones Value Object y Data Access Object\n";
+		textoIntroduccion = "Esta aplicaciÃ³n presenta un ejemplo prÃ¡ctico simple del patrÃ³n "
+				+ "de diseÃ±o arquitectural MVC.\n\n"
+				+ "La aplicaciÃ³n permite registrar, actualizar, buscar y eliminar registros de una tabla Persona." +
+				"tambiÃ©n son vinculados algunos conceptos de los Patrones Value Object y Data Access Object\n";
 
 		areaIntroduccion = new JTextArea();
 		areaIntroduccion.setBounds(50, 90, 380, 140);
@@ -68,7 +68,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		add(areaIntroduccion);
 	
 		setSize(480, 350);
-		setTitle("CoDejaVu : Patrones de Diseño/MVC");
+		setTitle("CoDejaVu : Patrones de DiseÃ±o/MVC");
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setLayout(null);

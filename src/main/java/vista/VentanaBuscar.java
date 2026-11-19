@@ -107,7 +107,7 @@ public class VentanaBuscar  extends JFrame implements ActionListener {
 		limpiar();
 				
 		setSize(480, 320);
-		setTitle("CoDejaVu : Patrones de Diseño/MVC");
+		setTitle("CoDejaVu : Patrones de DiseÃ±o/MVC");
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setLayout(null);
@@ -167,7 +167,7 @@ public class VentanaBuscar  extends JFrame implements ActionListener {
 			if (!textCod.getText().equals(""))
 			{
 				int respuesta = JOptionPane.showConfirmDialog(this,
-						"¿Esta seguro de eliminar la Persona?", "Confirmación",
+						"Â¿Esta seguro de eliminar la Persona?", "ConfirmaciÃ³n",
 						JOptionPane.YES_NO_OPTION);
 				if (respuesta == JOptionPane.YES_NO_OPTION)
 				{
@@ -176,7 +176,7 @@ public class VentanaBuscar  extends JFrame implements ActionListener {
 				}
 			}
 			else{
-				JOptionPane.showMessageDialog(null, "Ingrese un número de Documento", "Información",JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Ingrese un nÃºmero de Documento", "InformaciÃ³n",JOptionPane.WARNING_MESSAGE);
 			}
 			
 		}

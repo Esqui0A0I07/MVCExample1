@@ -36,7 +36,7 @@ public class VentanaRegistro extends JFrame implements ActionListener{
 		labelTitulo.setFont(new java.awt.Font("Verdana", 1, 18));
 
 		cod=new JLabel();
-		cod.setText("Código");
+		cod.setText("CÃ³digo");
 		cod.setBounds(20, 80, 80, 25);
 		add(cod);
 		
@@ -46,7 +46,7 @@ public class VentanaRegistro extends JFrame implements ActionListener{
 		add(nombre);
 
 		telefono=new JLabel();
-		telefono.setText("Teléfono");
+		telefono.setText("TelÃ©fono");
 		telefono.setBounds(290, 160, 80, 25);
 		add(telefono);
 		
@@ -56,7 +56,7 @@ public class VentanaRegistro extends JFrame implements ActionListener{
 		add(edad);
 		
 		profesion=new JLabel();
-		profesion.setText("Profesión");
+		profesion.setText("ProfesiÃ³n");
 		profesion.setBounds(20, 160, 80, 25);
 		add(profesion);
 		
@@ -87,7 +87,7 @@ public class VentanaRegistro extends JFrame implements ActionListener{
 		add(labelTitulo);
 		limpiar();
 		setSize(480, 300);
-		setTitle("CoDejaVu : Patrones de Diseño/MVC");
+		setTitle("CoDejaVu : Patrones de DiseÃ±o/MVC");
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setLayout(null);
